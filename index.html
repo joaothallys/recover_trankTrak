@@ -13,17 +13,21 @@
         <form class="recovery-form" id="recoveryForm">
             <img src="./img/logogrande.png" alt="Logo" class="logogrande">
             <div class="form-group">
-                <label for="username">Digite seu nome de usuário:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
                 <label for="email">Digite seu e-mail:</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <div class="form-group">
+                <label for="novaSenha">Digite sua nova senha:</label>
+                <input type="password" id="novaSenha" name="novaSenha" required>
+            </div>
+            
             <button type="submit" class="botaorecovery">Recuperar</button>
             <p class="lembrousenha">Lembrou sua senha? <a href="telalogin.html">Voltar ao login</a></p>
         </form>
         <img src="./img/logopequena.png" alt="Logo" class="logopequena">
+        
+        <div id="mensagemErro" class="mensagem-erro hidden"></div>
+        <div id="mensagemSucesso" class="mensagem-sucesso hidden"></div>
     </div>
 
     <script src="./javascript/recuperar-senha.js"></script>
