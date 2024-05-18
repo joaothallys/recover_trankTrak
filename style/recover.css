@@ -60,7 +60,7 @@ body {
     border: 1px solid #D0A933;
     border-radius: 3px;
     background-color: rgba(209, 169, 51, 0.2);
-    color: #D0A933; /* Define the text color */
+    color: #131211; /* Define the text color */
 }
 
 .botaorecovery {
@@ -83,4 +83,29 @@ body {
 .lembrousenha {
     margin-top: 7%;
     font-size: 1em;
+}
+
+/* Adicione estilos para mensagens de erro e sucesso */
+.mensagem-sucesso,
+.mensagem-erro {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mensagem-sucesso {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+.mensagem-erro {
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+
+/* Adicione uma classe para esconder as mensagens */
+.hidden {
+    display: none;
 }
