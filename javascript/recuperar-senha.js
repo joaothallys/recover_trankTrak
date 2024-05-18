@@ -1,20 +1,5 @@
 const nodemailer = require('nodemailer');
 
-
-document.getElementById('recoveryForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // Obter o e-mail digitado pelo usuário
-    const email = document.getElementById('email').value;
-    
-    // Chamando a função para enviar o e-mail de recuperação de senha
-    enviarEmailRecuperacaoSenha(email);
-    
-    // Exibir uma mensagem de confirmação para o usuário
-    alert('Um e-mail de recuperação de senha foi enviado para o seu endereço de e-mail.');
-});
-
-
 // Configurar o transporte de e-mail
 const transporter = nodemailer.createTransport({
     service: 'smtp.hostinger.com',
@@ -38,10 +23,23 @@ function enviarEmailRecuperacaoSenha(email) {
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
             console.error('Erro ao enviar e-mail:', error);
+            // Exibir mensagem de erro ao usuário
+            alert('Ocorreu um erro ao enviar o e-mail de recuperação de senha. Por favor, tente novamente mais tarde.');
         } else {
             console.log('E-mail enviado:', info.response);
+            // Exibir mensagem de sucesso ao usuário
+            alert('Um e-mail de recuperação de senha foi enviado para o seu endereço de e-mail.');
         }
     });
 }
 
-// Utilize a função enviarEmailRecuperacaoSenha(email, token) onde você precisar enviar o e-mail para o usuário.
+
+document.getElementById('recoveryForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Obter o e-mail digitado pelo usuário
+    const email = document.getElementById('email').value;
+    
+    // Chamando a função para enviar o e-mail de recuperação de senha
+    enviarEmailRecuperacaoSenha(email);
+});
