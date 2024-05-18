@@ -10,7 +10,7 @@ document.getElementById('recoveryForm').addEventListener('submit', async functio
     };
     
     try {
-        const response = await fetch('https://node-deploy-api-d20r.onrender.com/usuario/trocarsenha', {
+        const response = await fetch('https://node-deploy-api-d20r.onrender.com/usuario/senha', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
