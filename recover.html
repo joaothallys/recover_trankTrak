@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="./recover.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="recovery-form" id="recoveryForm">
+            <img src="./logogrande.png" alt="Logo" class="logogrande">
+            <div class="form-group">
+                <label for="username">Digite seu nome de usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Digite seu e-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="botaorecovery">Recuperar</button>
+            <p class="lembrousenha">Lembrou sua senha? <a href="telalogin.html">Voltar ao login</a></p>
+        </form>
+        <img src="./logopequena.png" alt="Logo" class="logopequena">
+    </div>
+
+    <script src="../javascript/recuperar-senha.js"></script>
+</body>
+
+</html>
